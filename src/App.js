@@ -6,10 +6,15 @@ import BestPokemon from "./BestPokemon";
 import React from "react";
 import CaughtPokemon from "./CaughtPokemon";
 
+
+function logWhenClicked () {
+    console.log("CLICKED");
+}
+
 function App(){
   return (
     <div>
-      <Logo appName="Pokedex"/>
+      <Logo appName="Pokedex" handleClick={logWhenClicked}/>
       <BestPokemon  abilities = {["Anticipation", "Adaptability", "Run-Away"]}/>
       <CaughtPokemon date = {new Date().toLocaleDateString()}/>
     </div>
